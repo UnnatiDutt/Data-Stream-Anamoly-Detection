@@ -12,6 +12,7 @@ def visualize(file_path):
         return
 
     detector = AnomalyDetector()
+    detector.fit(data_stream)
 
     fig, ax = plt.subplots()
     line, = ax.plot([], [], lw=2)

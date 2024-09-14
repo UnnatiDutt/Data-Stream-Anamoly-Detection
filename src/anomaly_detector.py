@@ -1,18 +1,17 @@
+from sklearn.ensemble import IsolationForest
+
 class AnomalyDetector:
-    def __init__(self, alpha=0.1, threshold=1):
-        self.alpha = alpha
-        self.threshold = threshold
-        self.ema = None
+    def __init__(self, contamination=0.01):
+        self.contamination = contamination
+        self.model = IsolationForest(contamination=self.contamination)
         self.anomalies = []
 
+    def fit(self, data):
+        self.model.fit(data.reshape(-1, 1))
+
     def detect(self, value):
-        if self.ema is None:
-            self.ema = value
-        else:
-            self.ema = self.alpha * value + (1 - self.alpha) * self.ema
-        
-        deviation = abs(value - self.ema)
-        if deviation > self.threshold:
+        prediction = self.model.predict([[value]])
+        if prediction == -1:
             self.anomalies.append(value)
             return True
         return False
