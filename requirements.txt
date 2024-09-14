@@ -1,0 +1,10 @@
+Libararies used : 
+1. pandas
+2. numpy
+3. matplotlib
+4. scikit-learn
+
+numpy: For numerical operations and handling arrays.
+pandas: For reading and manipulating CSV data.
+matplotlib: For plotting and visualizing data.
+scikit-learn: For using the Isolation Forest algorithm for anomaly detection.

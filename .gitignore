@@ -1,1 +1,3 @@
 /.vscode
+/tests/_pycache_
+/src/_pycache_
