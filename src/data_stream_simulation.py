@@ -16,9 +16,3 @@ def data_stream_simulation(file_path, size=1500):
     except Exception as e:
         print(f"Error in data stream simulation: {e}")
         return np.array([])
-
-# Example usage
-if __name__ == "__main__":
-    file_path = 'src/ec2_cpu_utilization.csv'
-    data = data_stream_simulation(file_path)
-    print(data)

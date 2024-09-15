@@ -1,3 +1,8 @@
+Steps To run :
+1. Install basic requirements
+2. Paste the dataset in the data folder and make sure to rename its colume name   (which contains the data) to "value" 
+3. Navigate THroud the project directory in Command Prompt or COde editor then run python main.py
+
 Algorithm used for Anomaly Detection : ISOLATION FOREST
 
 The Isolation Forest algorithm is an unsupervised machine learning algorithm used for anomaly detection. It is particularly effective in identifying outliers or anomalies in a dataset.
